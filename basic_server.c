@@ -1,16 +1,18 @@
 #include "pipe_networking.h"
 
-#define READ 0
-#define WRITE 1
 
 int main() {
+
   int to_client;
   int from_client;
-  int hasClient = 0;
-
   while (1){
-      from_client = server_handshake( &to_client );
+    from_client = server_setup();
+    int f = fork();
+    if (f != 0){
 
+    }
+    else{
+      int connection = server_connect(from_client);
       while (1){
         char input[10000];
         char intermediate[10000];
@@ -58,7 +60,7 @@ int main() {
         // printf("The length of the input is %ld\n",strlen(input));
         printf("The output here was %s\n",intermediate);
         write(to_client,output,10000);
+      }
     }
   }
-  return 0;
 }

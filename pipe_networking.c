@@ -24,7 +24,6 @@ int server_setup() {
   from_client = open(WKP, O_RDONLY, 0);
 
   remove(WKP);
-  fork();
   return from_client;
 }
 
