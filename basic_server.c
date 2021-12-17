@@ -24,9 +24,9 @@ int main() {
           break;
         }
 
-        printf("Party!\n");
+        //printf("Party!\n");
         strcpy(intermediate,input);
-        printf("The child here received here was %s\n",input);
+        //printf("The child here received here was %s\n",input);
         //printf("The output here was %s\n",intermediate);
         int counter = 0;
         for (int i = 0; intermediate[i]!='\0'; i++) {
@@ -54,11 +54,11 @@ int main() {
               //printf("OPTION 4");
             }
           }
-        printf("The new string is %s",intermediate);
+        //printf("The new string is %s",intermediate);
         }
         strcpy(output,intermediate);
         // printf("The length of the input is %ld\n",strlen(input));
-        printf("The output here was %s\n",intermediate);
+        //printf("The output here was %s\n",intermediate);
         write(to_client,output,10000);
       }
     }
