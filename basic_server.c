@@ -12,7 +12,7 @@ int main() {
 
     }
     else{
-      int connection = server_connect(from_client);
+      int to_client = server_connect(from_client);
       while (1){
         char input[10000];
         char intermediate[10000];
@@ -63,4 +63,5 @@ int main() {
       }
     }
   }
+  return 0;
 }
